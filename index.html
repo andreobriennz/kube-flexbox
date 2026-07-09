@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kube-flexbox demo</title>
+    <link rel="stylesheet" href="dist/kube-flexbox.css">
+    <style>
+        body { padding: 2rem; max-width: 960px; margin: 0 auto; }
+        h2 { border-bottom: 1px solid #e0e1e1; padding-bottom: .5rem; margin: 2.5rem 0 1.5rem; }
+        .demo-box { background: #e0e1e1; padding: 1rem; text-align: center; margin-bottom: .5rem; }
+        .relative { position: relative; }
+    </style>
+</head>
+<body>
+
+<h1>kube-flexbox</h1>
+<p>Combined <a href="https://github.com/kristoferjoseph/flexboxgrid">Flexbox-Grid</a> and <a href="https://imperavi.com/kube/">Kube 6.5</a> CSS framework. Use <code>dist/kube-flexbox.css</code> or <code>dist/kube-flexbox.min.css</code>.</p>
+
+<!-- ===================== GRID ===================== -->
+<h2>Flexbox Grid</h2>
+<p>12-column flexbox grid. Classes: <code>col-xs-*</code>, <code>col-sm-*</code>, <code>col-md-*</code>, <code>col-lg-*</code>.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12"><div class="demo-box">col-xs-12</div></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6"><div class="demo-box">col-xs-6</div></div>
+        <div class="col-xs-6"><div class="demo-box">col-xs-6</div></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4"><div class="demo-box">col-xs-4</div></div>
+        <div class="col-xs-4"><div class="demo-box">col-xs-4</div></div>
+        <div class="col-xs-4"><div class="demo-box">col-xs-4</div></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"><div class="demo-box">col-xs-3</div></div>
+        <div class="col-xs-3"><div class="demo-box">col-xs-3</div></div>
+        <div class="col-xs-3"><div class="demo-box">col-xs-3</div></div>
+        <div class="col-xs-3"><div class="demo-box">col-xs-3</div></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2"><div class="demo-box">2</div></div>
+        <div class="col-xs-8"><div class="demo-box">col-xs-8</div></div>
+        <div class="col-xs-2"><div class="demo-box">2</div></div>
+    </div>
+</div>
+
+<h3>Alignment</h3>
+<div class="container">
+    <div class="row start-xs">
+        <div class="col-xs-4"><div class="demo-box">start-xs</div></div>
+    </div>
+    <div class="row center-xs">
+        <div class="col-xs-4"><div class="demo-box">center-xs</div></div>
+    </div>
+    <div class="row end-xs">
+        <div class="col-xs-4"><div class="demo-box">end-xs</div></div>
+    </div>
+</div>
+
+<!-- ===================== TYPOGRAPHY ===================== -->
+<h2>Typography</h2>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<p>Regular paragraph. <strong>Bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code>inline code</code>, <a href="#">link</a>, <a href="#" class="danger">danger link</a>.</p>
+<blockquote>Blockquote: "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim." — Dijkstra</blockquote>
+<pre>pre { font-family: monospace; }</pre>
+<ul>
+    <li>Unordered list item</li>
+    <li>Another item
+        <ul><li>Nested item</li></ul>
+    </li>
+</ul>
+<ol>
+    <li>Ordered list item</li>
+    <li>Second item</li>
+</ol>
+
+<!-- ===================== BUTTONS ===================== -->
+<h2>Buttons</h2>
+<p>
+    <button class="button">Default (primary)</button>
+    <button class="button secondary">Secondary</button>
+    <button class="button outline">Outline</button>
+    <button class="button" disabled>Disabled</button>
+</p>
+<p>
+    <button class="button large">Large</button>
+    <button class="button">Default</button>
+    <button class="button small">Small</button>
+</p>
+<p>
+    <button class="button round">Round</button>
+    <button class="button raised">Raised</button>
+    <button class="button upper">Uppercase</button>
+</p>
+
+<!-- ===================== FORMS ===================== -->
+<h2>Forms</h2>
+<form>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <label>Text input</label>
+            <input type="text" placeholder="Placeholder">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com">
+        </div>
+    </div>
+    <label>Select</label>
+    <select>
+        <option>Option one</option>
+        <option>Option two</option>
+        <option>Option three</option>
+    </select>
+    <label>Textarea</label>
+    <textarea rows="3" placeholder="Enter text..."></textarea>
+    <label>Checkbox &amp; Radio</label>
+    <p>
+        <label><input type="checkbox" checked> Checkbox one</label>
+        <label><input type="checkbox"> Checkbox two</label>
+    </p>
+    <p>
+        <label><input type="radio" name="r" checked> Radio one</label>
+        <label><input type="radio" name="r"> Radio two</label>
+    </p>
+    <h4>Validation states</h4>
+    <input type="text" class="error" value="Error state">
+    <input type="text" class="success" value="Success state">
+    <p>
+        <button type="submit" class="button">Submit</button>
+        <button type="reset" class="button">Reset</button>
+    </p>
+</form>
+
+<!-- ===================== TABLES ===================== -->
+<h2>Tables</h2>
+<table>
+    <thead>
+        <tr><th>Name</th><th>Role</th><th>Status</th><th>Joined</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Alice</td><td>Developer</td><td>Active</td><td>2022-01-10</td></tr>
+        <tr><td>Bob</td><td>Designer</td><td>Active</td><td>2021-06-03</td></tr>
+        <tr><td>Carol</td><td>Manager</td><td>Inactive</td><td>2020-11-22</td></tr>
+    </tbody>
+</table>
+
+<!-- ===================== LABELS ===================== -->
+<h2>Labels</h2>
+<p>
+    <span class="label">Default</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-error">Error</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-focus">Focus</span>
+    <span class="label label-black">Black</span>
+</p>
+
+<!-- ===================== BREADCRUMBS ===================== -->
+<h2>Breadcrumbs</h2>
+<nav class="breadcrumbs">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Category</a></li>
+        <li class="active"><a href="#">Current page</a></li>
+    </ul>
+</nav>
+
+<!-- ===================== PAGINATION ===================== -->
+<h2>Pagination</h2>
+<nav class="pagination">
+    <ul>
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</nav>
+
+<h3>Pager</h3>
+<nav class="pagination pager">
+    <ul>
+        <li><a href="#">&larr; Previous</a></li>
+        <li class="next"><a href="#">Next &rarr;</a></li>
+    </ul>
+</nav>
+
+<!-- ===================== MESSAGES ===================== -->
+<h2>Messages <small>(click × to dismiss)</small></h2>
+<div class="message" data-component="message">
+    Default message. <a href="#" class="close">×</a>
+</div>
+<div class="message error" data-component="message">
+    Error message. Something went wrong. <a href="#" class="close">×</a>
+</div>
+<div class="message success" data-component="message">
+    Success! Your changes have been saved. <a href="#" class="close">×</a>
+</div>
+<div class="message warning" data-component="message">
+    Warning: this action cannot be undone. <a href="#" class="close">×</a>
+</div>
+<div class="message focus" data-component="message">
+    Info: here is something you should know. <a href="#" class="close">×</a>
+</div>
+
+<!-- ===================== TABS ===================== -->
+<h2>Tabs</h2>
+<nav data-component="tabs">
+    <ul>
+        <li><a href="#tab-overview">Overview</a></li>
+        <li><a href="#tab-install">Installation</a></li>
+        <li><a href="#tab-usage">Usage</a></li>
+    </ul>
+</nav>
+<div id="tab-overview">
+    <p><strong>Overview tab.</strong> kube-flexbox combines the Kube CSS framework with Flexbox-Grid, replacing Kube's built-in grid with a modern flexbox-based alternative.</p>
+</div>
+<div id="tab-install" class="hide">
+    <p><strong>Installation tab.</strong> Install via npm:</p>
+    <pre>npm install kube-flexbox --save</pre>
+</div>
+<div id="tab-usage" class="hide">
+    <p><strong>Usage tab.</strong> Link the CSS in your HTML:</p>
+    <pre>&lt;link rel="stylesheet" href="dist/kube-flexbox.css"&gt;</pre>
+</div>
+
+<!-- ===================== COLLAPSE ===================== -->
+<h2>Collapse / Accordion</h2>
+<div data-component="collapse">
+    <ul>
+        <li>
+            <a href="#collapse-1" class="collapse-toggle">What is kube-flexbox?</a>
+            <div id="collapse-1" class="collapse-box hide">
+                <p>kube-flexbox is a CSS framework that combines Kube 6.5 with Flexbox-Grid, replacing Kube's traditional grid system with a modern flexbox alternative.</p>
+            </div>
+        </li>
+        <li>
+            <a href="#collapse-2" class="collapse-toggle">How do I customise it?</a>
+            <div id="collapse-2" class="collapse-box hide">
+                <p>Edit <code>src/kube/src/_scss/_components.scss</code> to comment out any components you don't need, then run <code>npm run build</code> to regenerate the dist files.</p>
+            </div>
+        </li>
+        <li>
+            <a href="#collapse-3" class="collapse-toggle">Does it require JavaScript?</a>
+            <div id="collapse-3" class="collapse-box hide">
+                <p>The CSS works without JavaScript. Interactive components (tabs, collapse, modal, dropdown, messages) require jQuery and <code>dist/kube-flexbox.js</code>.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- ===================== DROPDOWN ===================== -->
+<h2>Dropdown</h2>
+<button class="button" data-component="dropdown" data-target="#my-dropdown">
+    Open dropdown ▾
+</button>
+<div class="dropdown" id="my-dropdown">
+    <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sign out</a></li>
+    </ul>
+</div>
+
+<!-- ===================== MODAL ===================== -->
+<h2>Modal</h2>
+<button class="button" data-component="modal" data-target="#my-modal">
+    Open modal
+</button>
+<div class="modal-box hide" id="my-modal">
+    <div class="modal hide">
+        <a href="#" class="close">×</a>
+        <div class="modal-header"><h3>Modal title</h3></div>
+        <div class="modal-body">
+            <p>This is the modal body. You can put any content here — forms, images, or text.</p>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Your name">
+                <label>Email</label>
+                <input type="email" placeholder="you@example.com">
+            </form>
+            <p style="margin-top:1rem">
+                <button class="button">Save</button>
+                <button class="button outline modal-close">Cancel</button>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (required for Kube JS components) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="dist/kube-flexbox.js"></script>
+
+</body>
+</html>
